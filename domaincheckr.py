@@ -1,7 +1,7 @@
 import whois
 from colorama import Fore, init
+import argparse
 
-# Inicializa o colorama
 init(autoreset=True)
 
 ascii_art = """
@@ -12,11 +12,11 @@ ascii_art = """
 \______|    \/     \/     \/                                
 """
 
-def verificar_disponibilidade(dominio):
-    extensoes = ['.com', '.net', '.org', '.info', '.co', '.io', '.pt', '.edu']
 
-    print(Fore.BLUE + ascii_art)  
-    
+init(autoreset=True)
+
+def check(dominio):
+    extensoes = ['.com', '.net', '.org', '.info', '.co', '.io', '.pt', '.edu', '.eu']
     for ext in extensoes:
         dominio_completo = dominio + ext
         try:
@@ -28,7 +28,16 @@ def verificar_disponibilidade(dominio):
         except Exception:
             print(f"{Fore.GREEN}{dominio_completo} está disponível.")
 
-if __name__ == "__main__":
+def main():
     print(Fore.BLUE + ascii_art)  
-    dominio = input("Domínio Pretendido (sem a extensão): ").strip()
-    verificar_disponibilidade(dominio)
+
+    parser = argparse.ArgumentParser(description="Verifica a disponibilidade de domínios.")
+    parser.add_argument('dominio', help="O nome do domínio (sem a extensão).")
+    
+    args = parser.parse_args()
+    
+    check(args.dominio)
+
+if __name__ == "__main__":
+    main()
+
