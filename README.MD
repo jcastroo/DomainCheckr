@@ -1,66 +1,68 @@
 # DomainCheckr
 
-**DomainCheckr** é uma ferramenta simples e eficaz que permite verificar a disponibilidade de domínios na internet. Este script suporta várias extensões populares, como `.com`, `.net`, `.org`, entre outras.
+**DomainCheckr** is a simple and effective tool that allows you to check the availability of domain names on the internet. This script supports several popular extensions, such as `.com`, `.net`, `.org`, and others.
 
-## Funcionalidade
+## Functionality
 
-A principal funcionalidade do **DomainCheckr** é permitir que o utilizador verifique se um determinado domínio está disponível para registo. Ele tenta registar o domínio em várias extensões populares e exibe se o domínio está disponível ou já foi registado.
+The main functionality of **DomainCheckr** is to allow the user to check if a specific domain is available for registration. It tries to register the domain with several popular extensions and displays whether the domain is available or already taken.
 
-## Instalação
+## Installation
 
-### 1. Clone o repositório
+### 1. Clone the repository
 
-Clone o repositório do GitHub com o seguinte comando:
+Clone the GitHub repository with the following command:
 git clone https://github.com/jcastroo/DomainCheckr.git
 
 
-### 2. Navegue para a pasta do repositório
+### 2. Navigate to the repository folder
 
-Depois de clonar, entre na pasta do repositório:
+After cloning, enter the repository folder:
 cd DomainCheckr
 
 
-### 3. Instale as dependências
+### 3. Install the dependencies
 
-Instale as dependências com o comando:
+Install the dependencies with the command:
 pip install .
 
 
+> **Note**: Make sure you have Python 3.x installed.
 
-> **Nota**: Certifique-se de ter o Python 3.x instalado.
+## Usage
 
-## Utilização
+After installing **DomainCheckr**, you can use the `domaincheckr` command directly from the command line to check the availability of a domain.
 
-Depois de instalar o **DomainCheckr**, pode utilizar o comando `domaincheckr` diretamente na linha de comando para verificar a disponibilidade de um domínio.
+### Syntax
+domaincheckr <domain>
 
-### Sintaxe
 
-domaincheckr <dominio>
+Where `<domain>` is the domain name you want to check (without the extension).
 
-Onde `<dominio>` é o nome do domínio que deseja verificar (sem a extensão).
+### Example
 
-### Exemplo
+If you want to check the availability of the domain `example`, run the following command:
+domaincheckr example
 
-Se quiser verificar a disponibilidade do domínio `exemplo`, execute o seguinte comando:
 
-domaincheckr exemplo
+The script will check the following extensions: `.com`, `.net`, `.org`, `.info`, `.co`, `.io` and show if the domain is available or already registered.
 
-O script irá verificar as extensões seguintes: `.com`, `.net`, `.org`, `.info`, `.co`, `.io` e mostrar se o domínio está disponível ou já foi registado.
+### Result
 
-### Resultado
+**DomainCheckr** will display available domains in green and already registered domains in red.
 
-O **DomainCheckr** mostrará os domínios disponíveis a verde e os domínios já registados a vermelho.
+## Contribution
 
-## Contribuição
+If you want to contribute to **DomainCheckr**, feel free to open *issues* or *pull requests*.
 
-Se quiser contribuir para o **DomainCheckr**, sinta-se à vontade para abrir *issues* ou *pull requests*.
+## License
 
-## Licença
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
-Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para mais detalhes.
-
-## Autor
+## Author
 
 - **João Castro** - [@jcastroo](https://github.com/jcastroo)
+
+
+
 
 
